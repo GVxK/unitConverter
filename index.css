@@ -1,22 +1,26 @@
 body {
     text-align: center;
 }
-
+p {
+    color:#d6d5c9
+}
 #main {
-    background-color: #902923;
+    background-color: #a22c29;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: #d6d5c9;
-    padding: 10px 0px 20px 0px;
+    padding: 10px 15px 20px 15px;
+    /* font-size: 12px; */
+    font-weight: bold;
 }
 #input-el {
     text-align: center;
-    width: 80px;
-    height: 80px;
-    font-size: 20px;
+    width: 100px;
+    height: 60px;
+    font-size: 25px;
     font-weight: bold;
-    padding: 0px 0px 0px 17px;
-    background-color: #902923;
+    padding: 0px 0px 0px 13px;
+    background-color: #a22c29;
     color:#d6d5c9;
     border: 2px solid #d6d5c9;
     border-radius: 5px;
@@ -28,17 +32,17 @@ body {
     padding: 5px 15px;
 }
 .results {
-    background-color: #1a0531;
+    background-color: #0a100d;
     color:#d6d5c9;
     padding: 10px 20px 10px 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 .each-result {
-    background-color: #320d6d;
+    background-color: #902923;
     border: 2px solid #f5f8de;
     border-radius: 5px;
     margin: 10px 0px 15px 0px;
-    color: #902923;
+    color: #b9baa3;
     
 }

@@ -17,9 +17,9 @@ let massEl = document.getElementById("result-mass")
 
 //Functions
 convertBtn.addEventListener("click", function() {
-    let meter = Math.round(3.281*inputEl.value*100)/100
+    let meter = Math.round((3.281*inputEl.value*100))/100
     let uMeter = "meter" 
-    let feet = Math.round(3.281/inputEl.value*100)/100
+    let feet = Math.round((3.281/inputEl.value*100))/100
     let uFeet = "feet"
     let liter = Math.round(0.264*inputEl.value*100)/100
     let uLiter = "liter"
@@ -29,12 +29,10 @@ convertBtn.addEventListener("click", function() {
     let uKilogram = "kilogram"
     let pound = Math.round(2.204/inputEl.value*100)/100
     let uPound = "pound"
-    let unitM = ""
-    let unitI = ""
     convert(lengthEl, uMeter, meter, uFeet, feet)
     convert(volumeEl, uLiter, liter, uGallon, gallon)
     convert(massEl, uKilogram, kilogram, uPound, pound)
-    test.textContent = inputEl.value
+
 
 })
 
