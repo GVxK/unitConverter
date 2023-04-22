@@ -13,28 +13,39 @@ let volumeEl = document.getElementById("result-volume")
 let massEl = document.getElementById("result-mass")
 
 //Variables
-let meter = 3.281*inputEl.value
-let feet = 3.281/inputEl.value
-let liter = 0.264*inputEl.value
-let gallon =0.264/inputEl.value
-let kilogram = 2.204*inputEl.value
-let pound = 2.204/inputEl.value
+
 
 //Functions
 convertBtn.addEventListener("click", function() {
-    let meter = (3.281*inputEl.value)*100/100
-    let feet = (3.281/inputEl.value)*100/100
-    let liter = 0.264*inputEl.value
-    let gallon =0.264/inputEl.value
-    let kilogram = 2.204*inputEl.value
-    let pound = 2.204/inputEl.value
-    convert(lengthEl, meter, feet)
-    convert(volumeEl, liter, gallon)
-    convert(massEl, kilogram, pound)
+    let meter = Math.round(3.281*inputEl.value*100)/100
+    let uMeter = "meter" 
+    let feet = Math.round(3.281/inputEl.value*100)/100
+    let uFeet = "feet"
+    let liter = Math.round(0.264*inputEl.value*100)/100
+    let uLiter = "liter"
+    let gallon = Math.round(0.264/inputEl.value*100)/100
+    let uGallon = "gallon"
+    let kilogram = Math.round(2.204*inputEl.value*100)/100
+    let uKilogram = "kilogram"
+    let pound = Math.round(2.204/inputEl.value*100)/100
+    let uPound = "pound"
+    let unitM = ""
+    let unitI = ""
+    convert(lengthEl, uMeter, meter, uFeet, feet)
+    convert(volumeEl, uLiter, liter, uGallon, gallon)
+    convert(massEl, uKilogram, kilogram, uPound, pound)
+    test.textContent = inputEl.value
 
 })
 
-function convert(el,metric,imperial) {
-   
-    el.textContent = `${inputEl.value} metric = ${metric} imperial | ${inputEl.value} imperial = ${imperial} metric `
+function convert(el, unitM, metric, unitI, imperial) {
+        if (inputEl.value === "1") {
+        el.textContent = `${inputEl.value} ${unitM} = ${metric} ${unitI}s  |  ${inputEl.value} ${unitI} = ${imperial} ${unitM}s `
+        } else {
+        el.textContent = `${inputEl.value} ${unitM}s = ${metric} ${unitI}s  |  ${inputEl.value} ${unitI}s = ${imperial} ${unitM}s `
+        }
+}
+
+function units() {
+    
 }
