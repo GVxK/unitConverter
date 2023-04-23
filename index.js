@@ -21,13 +21,13 @@ convertBtn.addEventListener("click", function() {
     let uMeter = "meter" 
     let feet = Math.round((0.3048*inputEl.value*100))/100
     let uFeet = "feet"
-    let liter = Math.round(0,264172*inputEl.value*100)/100
+    let liter = Math.round(0.264172*inputEl.value*100)/100
     let uLiter = "liter"
     let gallon = Math.round(3.78541*inputEl.value*100)/100
     let uGallon = "gallon"
     let kilogram = Math.round(2.204*inputEl.value*100)/100
     let uKilogram = "kilogram"
-    let pound = Math.round(0,453592*inputEl.value*100)/100
+    let pound = Math.round(0.453592*inputEl.value*100)/100
     let uPound = "pound"
     convert(lengthEl, uMeter, meter, uFeet, feet)
     convert(volumeEl, uLiter, liter, uGallon, gallon)
